@@ -16,7 +16,7 @@ const HeaderComponent = ({ header }: { header: Header }) => {
   const isWithoutHeaderFooterUrl = withoutHeaderFooterUrls.includes(pathName)
 
   return (
-    <nav
+    <div
       className={[classes.header, isWithoutHeaderFooterUrl && classes.hide]
         .filter(Boolean)
         .join(' ')}
@@ -26,7 +26,7 @@ const HeaderComponent = ({ header }: { header: Header }) => {
 
         <HeaderNav header={header} />
       </Gutter>
-    </nav>
+    </div>
   )
 }
 
