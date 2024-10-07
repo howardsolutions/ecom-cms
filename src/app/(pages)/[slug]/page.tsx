@@ -20,8 +20,6 @@ import { generateMeta } from '../../_utilities/generateMeta'
 // If you are not using Payload Cloud then this line can be removed, see `../../../README.md#cache`
 export const dynamic = 'force-dynamic'
 
-// import Categories from '../../_components/Categories'
-
 import Categories from '../../_components/Categories'
 
 import classes from './index.module.scss'
@@ -66,9 +64,9 @@ export default async function Page({ params: { slug = 'home' } }) {
         <section>
           <Hero {...hero} />
 
-          {/* <Gutter className={classes.home}>
+          <Gutter className={classes.home}>
             <Categories categories={categories} />
-          </Gutter> */}
+          </Gutter>
         </section>
       ) : (
         <>

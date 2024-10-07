@@ -14,7 +14,13 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
 
   return (
     <section className={classes.hero}>
-      <div className={classes.heroWrapper} style={{ backgroundImage: `url(${mediaUrl})` }}>
+      <div
+        className={classes.heroWrapper}
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5),
+                       rgba(0, 0, 0, 0.5)), url(${mediaUrl})`,
+        }}
+      >
         <div className={classes.heroTextBox}>
           <RichText content={richText} />
 
