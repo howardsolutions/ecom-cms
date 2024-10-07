@@ -23,8 +23,8 @@ const HeaderComponent = ({ header }: { header: Header }) => {
         .join(' ')}
     >
       <Gutter className={classes.wrap}>
-        <Link href="/">
-          <Image src="/logo.svg" alt="logo" width={90} height={40} />
+        <Link className={classes.logo} href="/">
+          Ecommerce
         </Link>
 
         <HeaderNav header={header} />
