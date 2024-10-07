@@ -46,6 +46,7 @@ export interface Page {
           link: {
             type?: ('reference' | 'custom') | null;
             newTab?: boolean | null;
+            icon?: string | Media | null;
             reference?: {
               relationTo: 'pages';
               value: string | Page;
@@ -70,6 +71,7 @@ export interface Page {
               link: {
                 type?: ('reference' | 'custom') | null;
                 newTab?: boolean | null;
+                icon?: string | Media | null;
                 reference?: {
                   relationTo: 'pages';
                   value: string | Page;
@@ -97,6 +99,7 @@ export interface Page {
               link?: {
                 type?: ('reference' | 'custom') | null;
                 newTab?: boolean | null;
+                icon?: string | Media | null;
                 reference?: {
                   relationTo: 'pages';
                   value: string | Page;
@@ -203,6 +206,7 @@ export interface Product {
               link: {
                 type?: ('reference' | 'custom') | null;
                 newTab?: boolean | null;
+                icon?: string | Media | null;
                 reference?: {
                   relationTo: 'pages';
                   value: string | Page;
@@ -230,6 +234,7 @@ export interface Product {
               link?: {
                 type?: ('reference' | 'custom') | null;
                 newTab?: boolean | null;
+                icon?: string | Media | null;
                 reference?: {
                   relationTo: 'pages';
                   value: string | Page;
@@ -294,6 +299,7 @@ export interface Product {
                   link: {
                     type?: ('reference' | 'custom') | null;
                     newTab?: boolean | null;
+                    icon?: string | Media | null;
                     reference?: {
                       relationTo: 'pages';
                       value: string | Page;
@@ -321,6 +327,7 @@ export interface Product {
                   link?: {
                     type?: ('reference' | 'custom') | null;
                     newTab?: boolean | null;
+                    icon?: string | Media | null;
                     reference?: {
                       relationTo: 'pages';
                       value: string | Page;
@@ -479,6 +486,7 @@ export interface Header {
         link: {
           type?: ('reference' | 'custom') | null;
           newTab?: boolean | null;
+          icon?: string | Media | null;
           reference?: {
             relationTo: 'pages';
             value: string | Page;
@@ -500,6 +508,7 @@ export interface Footer {
         link: {
           type?: ('reference' | 'custom') | null;
           newTab?: boolean | null;
+          icon?: string | Media | null;
           reference?: {
             relationTo: 'pages';
             value: string | Page;
