@@ -23,6 +23,7 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
         return <CMSLink key={i} {...link} appearance="none" />
       })}
       {user && <Link href="/account">Account</Link>}
+      <CartLink />
       {!user && (
         <Button
           el="link"
@@ -32,7 +33,6 @@ export const HeaderNav: React.FC<{ header: HeaderType }> = ({ header }) => {
           onClick={() => router.push('/login')}
         />
       )}
-      <CartLink />
     </nav>
   )
 }
