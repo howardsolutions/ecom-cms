@@ -43,7 +43,6 @@ export const CollectionArchive: React.FC<Props> = props => {
     relationTo,
     showPageRange,
     onResultChange,
-    limit = 10,
     populatedDocs,
     populatedDocsTotal,
   } = props
@@ -105,7 +104,7 @@ export const CollectionArchive: React.FC<Props> = props => {
               }
             : {}),
         },
-        limit,
+        limit: 9,
         page,
         depth: 1,
       },
@@ -142,7 +141,7 @@ export const CollectionArchive: React.FC<Props> = props => {
     return () => {
       if (timer) clearTimeout(timer)
     }
-  }, [page, categoryFilters, relationTo, onResultChange, sort, limit])
+  }, [page, categoryFilters, relationTo, onResultChange, sort])
 
   return (
     <div className={[classes.collectionArchive, className].filter(Boolean).join(' ')}>
@@ -155,7 +154,7 @@ export const CollectionArchive: React.FC<Props> = props => {
               totalDocs={results.totalDocs}
               currentPage={results.page}
               collection={relationTo}
-              limit={limit}
+              limit={9}
             />
           </div>
         )}

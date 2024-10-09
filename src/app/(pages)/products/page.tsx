@@ -1,4 +1,5 @@
 import React from 'react'
+import { Metadata } from 'next'
 import { draftMode } from 'next/headers'
 
 import { Category, Page } from '../../../payload/payload-types'
@@ -7,6 +8,7 @@ import { fetchDocs } from '../../_api/fetchDocs'
 import { Blocks } from '../../_components/Blocks'
 import { Gutter } from '../../_components/Gutter'
 import { HR } from '../../_components/HR'
+import { mergeOpenGraph } from '../../_utilities/mergeOpenGraph'
 import Filters from './ProductFilter'
 
 import classes from './index.module.scss'
@@ -41,3 +43,9 @@ const Products = async () => {
 }
 
 export default Products
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL),
+  title: 'All Product',
+  openGraph: mergeOpenGraph(),
+}
